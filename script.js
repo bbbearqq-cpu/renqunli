@@ -59,3 +59,10 @@ async function addMessage() {
 }
 
 window.addEventListener("DOMContentLoaded", loadMessages);
+
+.char-count {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8a7f78;
+  text-align: right;
+}
