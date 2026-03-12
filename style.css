@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f6f3ee;
+  color: #2f2a26;
+  line-height: 1.7;
+}
+
+.hero {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(135deg, #6b5b53, #b8a398, #e8ddd4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin-bottom: 16px;
+  letter-spacing: 6px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 28px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: white;
+  color: #5b4c45;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.intro p {
+  font-size: 18px;
+  color: #5c524c;
+}
+
+.post-box textarea {
+  width: 100%;
+  min-height: 140px;
+  border: none;
+  border-radius: 18px;
+  padding: 18px;
+  font-size: 16px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  resize: vertical;
+}
+
+.post-box button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  background: #6b5b53;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.message-list {
+  display: grid;
+  gap: 16px;
+}
+
+.message-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  color: #453d38;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px 50px;
+  color: #7b6f68;
+}

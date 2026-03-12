@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人群里</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>人群里</h1>
+      <p>把想说的话，留在人群里。</p>
+      <a href="#post-box" class="main-btn">写下此刻</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>这里是什么地方？</h2>
+      <p>
+        这里是一个匿名树洞。你可以写下情绪、秘密、疲惫、想念，
+        不需要名字，也不需要解释。
+      </p>
+    </section>
+
+    <section id="post-box" class="post-box">
+      <h2>留下你此刻的话</h2>
+      <textarea id="messageInput" placeholder="写点什么吧……"></textarea>
+      <button onclick="addMessage()">匿名发布</button>
+    </section>
+
+    <section class="wall">
+      <h2>人群里的声音</h2>
+      <div id="messageList" class="message-list">
+        <div class="message-card">有时候只是想被理解一下。</div>
+        <div class="message-card">今天也在努力好好生活。</div>
+        <div class="message-card">希望所有深夜难过的人，都能慢慢好起来。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>人群里 © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
