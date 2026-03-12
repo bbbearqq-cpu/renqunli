@@ -115,3 +115,15 @@ footer {
   padding: 30px 20px 50px;
   color: #7b6f68;
 }
+
+.message-time {
+  font-size: 13px;
+  color: #8a7f78;
+  margin-bottom: 8px;
+}
+
+.message-text {
+  font-size: 16px;
+  color: #453d38;
+  white-space: pre-wrap;
+}
