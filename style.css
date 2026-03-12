@@ -127,3 +127,10 @@ footer {
   color: #453d38;
   white-space: pre-wrap;
 }
+
+.char-count {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8a7f78;
+  text-align: right;
+}
