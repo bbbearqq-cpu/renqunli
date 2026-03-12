@@ -18,21 +18,21 @@ async function loadMessages() {
   }
 
   data.forEach((item) => {
-  const card = document.createElement("div");
-  card.className = "message-card";
+    const card = document.createElement("div");
+    card.className = "message-card";
 
-  const time = document.createElement("div");
-  time.className = "message-time";
-  time.textContent = new Date(item.created_at).toLocaleString("zh-CN");
+    const time = document.createElement("div");
+    time.className = "message-time";
+    time.textContent = new Date(item.created_at).toLocaleString("zh-CN");
 
-  const content = document.createElement("div");
-  content.className = "message-text";
-  content.textContent = item.content;
+    const content = document.createElement("div");
+    content.className = "message-text";
+    content.textContent = item.content;
 
-  card.appendChild(time);
-  card.appendChild(content);
-  messageList.appendChild(card);
-});
+    card.appendChild(time);
+    card.appendChild(content);
+    messageList.appendChild(card);
+  });
 }
 
 async function addMessage() {
@@ -41,6 +41,11 @@ async function addMessage() {
 
   if (!text) {
     alert("先写一点内容吧。");
+    return;
+  }
+
+  if (text.length > 200) {
+    alert("最多只能输入 200 个字。");
     return;
   }
 
@@ -55,14 +60,20 @@ async function addMessage() {
   }
 
   input.value = "";
+  updateCharCount();
   loadMessages();
 }
 
-window.addEventListener("DOMContentLoaded", loadMessages);
-
-.char-count {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #8a7f78;
-  text-align: right;
+function updateCharCount() {
+  const input = document.getElementById("messageInput");
+  const charCount = document.getElementById("charCount");
+  charCount.textContent = `${input.value.length} / 200`;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadMessages();
+
+  const input = document.getElementById("messageInput");
+  input.addEventListener("input", updateCharCount);
+  updateCharCount();
+});
