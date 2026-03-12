@@ -27,8 +27,9 @@
 
     <section id="post-box" class="post-box">
       <h2>留下你此刻的话</h2>
-      <textarea id="messageInput" placeholder="写点什么吧……"></textarea>
-      <button onclick="addMessage()">匿名发布</button>
+      <textarea id="messageInput" placeholder="写点什么吧……" maxlength="200"></textarea>
+<div id="charCount" class="char-count">0 / 200</div>
+<button onclick="addMessage()">匿名发布</button>
     </section>
 
     <section class="wall">
