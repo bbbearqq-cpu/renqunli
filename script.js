@@ -18,11 +18,21 @@ async function loadMessages() {
   }
 
   data.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "message-card";
-    card.textContent = item.content;
-    messageList.appendChild(card);
-  });
+  const card = document.createElement("div");
+  card.className = "message-card";
+
+  const time = document.createElement("div");
+  time.className = "message-time";
+  time.textContent = new Date(item.created_at).toLocaleString("zh-CN");
+
+  const content = document.createElement("div");
+  content.className = "message-text";
+  content.textContent = item.content;
+
+  card.appendChild(time);
+  card.appendChild(content);
+  messageList.appendChild(card);
+});
 }
 
 async function addMessage() {
